@@ -83,8 +83,8 @@ body {
     margin: 50px auto;
     padding: 30px;
     background-color: var(--color-neutral-0);
-    border-radius: 15px; /* Mais arredondado */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Sombra mais suave */
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     text-align: left;
     animation: fadeIn 0.8s ease-in-out;
 }
