@@ -3,19 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css">
     <title>Projeto Web 2024.2</title>
 </head>
 <body>
-    <h1>Gerenciar Peças</h1>
+    <header class="header">
+        <a href="#home" class="logo">Numa</a>
+        <nav class="navbar">
+            <a href="home.html">Home</a>
+            <a href="index.html">Cadastro</a>
+            <a href="#">Dashboard</a>
+            <a href="#">Contato</a>
+        </nav>
+    </header>
+    <div class="formulario">
     <form id="teste">
-        <input type="text" id="nome" placeholder="nome da peça" required>
-        <input type="text" id="horario" placeholder="horário da peça" required>
-        <input type="date" id="datacriacao" placeholder="data de criação" required>
-        <button type="submit">Enviar</button>
+        <input type="text" id="nome" placeholder="Nome da peça" required>
+        <select id="horario">
+            <option value="manha">Manhã</option>
+            <option value="tarde">Tarde</option>
+            <option value="noite">Noite</option>
+        </select>
+        <select id="teatro">
+            <option value="Teatro do Parque">Teatro do Parque</option>
+            <option value="Teatro do Riomar">Teatro do Riomar</option>
+            <option value="Teatro de Santa Isabel">Teatro de Santa Isabel</option>
+            <option value="Caixa cultural do Recife">Caixa Cultural do Recife</option>
+        </select>
+        <select id="tipo">
+            <option value="stand_up">Standup</option>
+            <option value="experimental">Experimental</option>
+            <option value="infantil">Infantil</option>
+            <option value="danca">Dança</option>
+            <option value="musical">Musical</option>
+            <option value="opera">Ópera</option>
+            <option value="comedia">Comédia</option>
+        </select>
+        <button type="button" id="adicionar_btn">Adicionar</button>
+        <button id="listar_btn">Listar Peças</button>
+        <button type="button" id="remover_btn">Remover</button>
+        <div id="lista_pecas"></div>
     </form>
-    <h1>Lista de peça (SUBSTITUIDO PELO DASHBOARD)</h1>
-    <ul id="lista"></ul>
+    </div>
     <script src="apps.js"></script>
 </body>
 </html>
