@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.0.1/dist/chart.umd.min.js"></script>
+    <link rel="stylesheet" href="dashboard.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="header">
+        <a href="#home" class="logo">Numa</a>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="#">Cadastro</a>
+            <a href="#">Dashboard</a>
+            <a href="#">Contato</a>
+        </nav>
+    </header>
+    <header class="header">
+        <a href="#home" class="logo">Numa</a>
+        <nav class="navbar">
+            <a href="home.html">Home</a>
+            <a href="#">Cadastro</a>
+            <a href="#">Dashboard</a>
+            <a href="#">Contato</a>
+        </nav>
+    </header>
+
+    <div class="content">
+        <!-- Gráficos -->
+        <div class="charts-section">
+            <div class="row">
+                <div class="chart chart-pie">
+                    <h2>Relação de peças por teatro </h2>
+                    <canvas id="chart1"></canvas>
+                </div>
+                <div class="chart chart-pie">
+                    <h2>Relação de gênero por teatro </h2>
+                    <canvas id="chart2"></canvas>
+                </div>
+            </div>
+            <div class="chart chart-large">
+                <h2>Relação de turnos por teatro </h2>
+                <canvas id="chart3"></canvas>
+            </div>
+        </div>
+
+        <!-- Listagem -->
+        <div class="list">
+            <h2>Lista de Peças</h2>
+            <div id="lista-teatros"></div>
+        </div>
+    </div>
+    
+    <script src="dashboard.js"></script>
+</body>
+</html>
