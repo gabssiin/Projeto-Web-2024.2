@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+:root {
+    --color-primary-1: #ffefea;
+    --color-primary-2: #595959;
+    --color-primary-3: #b30027;
+    --color-primary-4: #ee284d;
+    --color-primary-5: #e3405e;
+    --color-primary-6: #ee284d;
+
+    --color-neutral-0: #fff;
+    --color-neutral-1: #1d1d1d;
+    --color-neutral-2: #000;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 100%;
+    background-color: var(--color-neutral-0);
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--color-neutral-0);
+    width: 100%;
+    padding-top: 100px; 
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background: var(--color-neutral-0);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    height: 80px; 
+}
+
+.logo {
+    font-size: 32px;
+    color: var(--color-neutral-2);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.navbar a {
+    position: relative;
+    font-size: 18px;
+    color: var(--color-neutral-2);
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 40px;
+}
+
+.navbar a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--color-primary-6);
+    transition: .3s;
+}
+
+.navbar a:hover::before {
+    width: 100%;
+}
+.formulario {
+    width: 100%;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: var(--color-neutral-0);
+    border-radius: 15px; /* Mais arredondado */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Sombra mais suave */
+    text-align: left;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.formulario form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.formulario input,
+.formulario select {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+    border: 1px solid var(--color-primary-2);
+    border-radius: 10px; /* Arredondado */
+    outline: none;
+    background: #f9f9f9;
+    transition: border-color 0.3s, box-shadow 0.3s, background-color 0.3s;
+}
+
+.formulario input:hover,
+.formulario select:hover {
+    background: #f3f3f3;
+}
+
+.formulario input:focus,
+.formulario select:focus {
+    border-color: var(--color-primary-4);
+    box-shadow: 0 0 6px var(--color-primary-4);
+}
+
+.formulario button {
+    padding: 8px 12px;
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--color-neutral-0);
+    background: var(--color-primary-4);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    min-width: 140px;
+    text-align: center;
+}
+
+.formulario button:hover {
+    background: var(--color-primary-5);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.formulario button:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+#lista_pecas {
+    margin-top: 20px;
+    padding: 15px;
+    font-size: 14px;
+    border: 1px solid var(--color-primary-2);
+    border-radius: 10px; /* Arredondado */
+    background: #f9f9f9;
+    color: var(--color-primary-2);
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.5s ease;
+}
+
+#lista_pecas:empty {
+    border: none;
+    padding: 0;
+}
+
+#lista_pecas:not(:empty) {
+    max-height: 300px;
+    opacity: 1;
+    transform: translateY(0);
+    overflow-y: auto;
+}
+
+#lista_pecas ul {
+    list-style: none;
+    padding: 0;
+}
+
+#lista_pecas li {
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    background: #ffffff;
+    border-radius: 8px; /* Arredondar os itens */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#lista_pecas li:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+.formulario h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--color-primary-3);
+    text-align: center;
+}
