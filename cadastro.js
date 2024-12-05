@@ -1,4 +1,5 @@
 document.getElementById('adicionar_btn').addEventListener('click', async function(event) {
+    event.preventDefault();
     //pega os dados do form
     const nomeDaPeca = document.getElementById('nome').value;
     const horarioDaPeca = document.getElementById('horario').value;
@@ -6,14 +7,15 @@ document.getElementById('adicionar_btn').addEventListener('click', async functio
     const tipoDePeca = document.getElementById('tipo').value;
 
     try {
-        await adicionar(nomeDaPeca, horarioDaPeca, teatroNome, tipoDePeca);
+         adicionar(nomeDaPeca, horarioDaPeca, teatroNome, tipoDePeca);
     } catch (error) {
         console.error('Erro ao adicionar peça:', error);
     }
 });
 document.getElementById('listar_btn').addEventListener('click', async function(event) {
+    event.preventDefault();
     try {
-        await listar();
+        listar();
     } catch (error) {
         console.error('Erro ao listar peças:', error);
     }
@@ -30,7 +32,8 @@ document.getElementById('remover_btn').addEventListener('click', async function(
         const objectId = await buscaObjectId(nomeDaPeca, horarioDaPeca, teatroNome,tipoDePeca);
         if (objectId) {
             //chama a função pra remover o item baseado no objectId
-            await remover(objectId);
+           remover(objectId);
+           
         } else {
             alert('Peça não encontrada.');
         }
@@ -147,4 +150,5 @@ async function remover(objectId) {
         console.error('Erro ao remover peça:', error);
         alert('Erro ao remover peça.');
     }
+    window.location.reload();
 }
