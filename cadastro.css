@@ -11,6 +11,7 @@
     --color-neutral-0: #fff;
     --color-neutral-1: #1d1d1d;
     --color-neutral-2: #000;
+    --color-neutral-3: #848484;
 }
 
 * {
@@ -111,8 +112,8 @@ body {
     width: 100%;
     padding: 12px;
     font-size: 14px;
-    border: 1px solid var(--color-primary-2);
-    border-radius: 10px; /* Arredondado */
+    border: 1px solid var(--color-neutral-1);
+    border-radius: 10px; 
     outline: none;
     background: #f9f9f9;
     transition: border-color 0.3s, box-shadow 0.3s, background-color 0.3s;
@@ -125,8 +126,7 @@ body {
 
 .formulario input:focus,
 .formulario select:focus {
-    border-color: var(--color-primary-4);
-    box-shadow: 0 0 6px var(--color-primary-4);
+    box-shadow: 0 0 6px var(--color-neutral-3);
 }
 
 .formulario button {
@@ -134,7 +134,7 @@ body {
     font-size: 14px;
     font-weight: bold;
     color: var(--color-neutral-0);
-    background: var(--color-primary-4);
+    background: var(--color-primary-3);
     border: none;
     border-radius: 20px;
     cursor: pointer;
@@ -159,8 +159,8 @@ body {
     margin-top: 20px;
     padding: 15px;
     font-size: 14px;
-    border: 1px solid var(--color-primary-2);
-    border-radius: 10px; /* Arredondado */
+    border: 1px solid var(--color-neutral-1);
+    border-radius: 10px;
     background: #f9f9f9;
     color: var(--color-primary-2);
     max-height: 0;
